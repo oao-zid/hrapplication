@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.64.93"
+                id="departmentDetailsTF_departmentDetailsTF_ExecuteWithParamsPageDef"
+                Package="adf.course.practice3.hrapplication.departmentdetails.view.pageDefs"
+                SkipValidation="true">
+  <parameters/>
+  <executables>
+    <iterator Binds="DepartmentDetails" RangeSize="25"
+              DataControl="HRModuleDataControl" id="DepartmentDetailsIterator"
+              Refresh="never"/>
+  </executables>
+  <bindings>
+    <action IterBinding="DepartmentDetailsIterator" id="ExecuteWithParams"
+            RequiresUpdateModel="true" Action="executeWithParams">
+      <NamedData NDName="varDepartmentId"
+                 NDValue="#{pageFlowScope.paramDepartmentId}"
+                 NDType="java.lang.Long"/>
+    </action>
+  </bindings>
+</pageDefinition>

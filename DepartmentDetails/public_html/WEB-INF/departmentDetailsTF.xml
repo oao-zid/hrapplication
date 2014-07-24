@@ -1,12 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
   <task-flow-definition id="departmentDetailsTF">
+    <default-activity id="__1">findByDepartmentId</default-activity>
     <input-parameter-definition id="__3">
       <name id="__2">paramDepartmentId</name>
       <value>#{pageFlowScope.paramDepartmentId}</value>
       <class>java.lang.String</class>
       <required/>
     </input-parameter-definition>
+    <method-call id="findByDepartmentId">
+      <method>#{bindings.ExecuteWithParams.execute}</method>
+      <outcome id="__4">
+        <fixed-outcome>ExecuteWithParams</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="departmentDetails">
+      <page>/departmentDetails.jsff</page>
+    </view>
+    <task-flow-return id="back">
+      <outcome id="__15">
+        <name>back</name>
+      </outcome>
+    </task-flow-return>
+    <control-flow-rule id="__10">
+      <from-activity-id id="__11">findByDepartmentId</from-activity-id>
+      <control-flow-case id="__12">
+        <from-outcome id="__14">ExecuteWithParams</from-outcome>
+        <to-activity-id id="__13">departmentDetails</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__16">
+      <from-activity-id id="__17">departmentDetails</from-activity-id>
+      <control-flow-case id="__18">
+        <from-outcome id="__20">goBack</from-outcome>
+        <to-activity-id id="__19">back</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
     <use-page-fragments/>
   </task-flow-definition>
 </adfc-config>
