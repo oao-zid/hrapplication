@@ -17,18 +17,14 @@
       <property
          name="y">221.59766</property>
       <property
-         name="pageFragment">true</property>
-      <property
          name="x">366.0</property>
+      <property
+         name="pageFragment">true</property>
    </View>
    <TaskFlowCall
       id="TaskFlowCall3">
       <property
-         name="taskFlowId">departmentDetailsTF</property>
-      <property
          name="activityId">departmentDetailsTF</property>
-      <property
-         name="documentReference">/WEB-INF/departmentDetailsTF.xml</property>
       <property
          name="description">&lt;html>&lt;p>&lt;b>departmentDetailsTF&lt;/b>&lt;/p>&lt;p>Activity Type:  Task Flow Call&lt;/p></property>
       <property
