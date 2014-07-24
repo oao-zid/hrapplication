@@ -18,6 +18,7 @@
       <value n="oracle.webcenter.internal.dt.migration.WebCenterWorkspaceMigrator" v="11.1.1.4.0.101019.0800"/>
    </hash>
    <list n="listOfChildren">
+      <hash><url n="URL" path="DepartmentDetails/DepartmentDetails.jpr"/></hash>
       <hash><url n="URL" path="DepartmentsList/DepartmentsList.jpr"/></hash>
       <hash><url n="URL" path="Model/Model.jpr"/></hash>
       <hash><url n="URL" path="ViewController/ViewController.jpr"/></hash>
@@ -42,6 +43,11 @@
                      <value n="adapterClass" v="oracle.jdevimpl.deploy.common.DefaultProfileDependable"/>
                      <url n="ownerURL" path="DepartmentsList/DepartmentsList.jpr"/>
                      <value n="profileName" v="HRApplication_DepartmentsList_webapp1"/>
+                  </hash>
+                  <hash>
+                     <value n="adapterClass" v="oracle.jdevimpl.deploy.common.DefaultProfileDependable"/>
+                     <url n="ownerURL" path="DepartmentDetails/DepartmentDetails.jpr"/>
+                     <value n="profileName" v="HRApplication_DepartmentDetails_webapp1"/>
                   </hash>
                </list>
             </hash>
