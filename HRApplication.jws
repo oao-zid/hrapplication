@@ -1,5 +1,8 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <jws:workspace xmlns:jws="http://xmlns.oracle.com/ide/project">
+   <hash n="adrs-workspace-properties">
+      <value n="adrs-instance-binding" v="DefaultServer"/>
+   </hash>
    <value n="application-package-prefix" v="adf.course.practice3.hrapplication"/>
    <value n="appTemplateId" v="adfWebappApplicationTemplate"/>
    <hash n="component-versions">
@@ -15,6 +18,7 @@
       <value n="oracle.webcenter.internal.dt.migration.WebCenterWorkspaceMigrator" v="11.1.1.4.0.101019.0800"/>
    </hash>
    <list n="listOfChildren">
+      <hash><url n="URL" path="DepartmentsList/DepartmentsList.jpr"/></hash>
       <hash><url n="URL" path="Model/Model.jpr"/></hash>
       <hash><url n="URL" path="ViewController/ViewController.jpr"/></hash>
    </list>
@@ -33,6 +37,11 @@
                      <value n="adapterClass" v="oracle.jdevimpl.deploy.common.DefaultProfileDependable"/>
                      <url n="ownerURL" path="ViewController/ViewController.jpr"/>
                      <value n="profileName" v="HRApplication_ViewController_webapp1"/>
+                  </hash>
+                  <hash>
+                     <value n="adapterClass" v="oracle.jdevimpl.deploy.common.DefaultProfileDependable"/>
+                     <url n="ownerURL" path="DepartmentsList/DepartmentsList.jpr"/>
+                     <value n="profileName" v="HRApplication_DepartmentsList_webapp1"/>
                   </hash>
                </list>
             </hash>
