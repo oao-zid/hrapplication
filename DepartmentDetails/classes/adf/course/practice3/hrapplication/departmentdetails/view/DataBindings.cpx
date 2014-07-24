@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application"
+             version="11.1.1.64.93" id="DataBindings" SeparateXMLFiles="false"
+             Package="adf.course.practice3.hrapplication.departmentdetails.view" ClientType="Generic">
+  <definitionFactories>
+    <factory nameSpace="http://xmlns.oracle.com/adf/controller/binding"
+             className="oracle.adf.controller.internal.binding.TaskFlowBindingDefFactoryImpl"/>
+    <dtfactory className="oracle.adf.controller.internal.dtrt.binding.BindingDTObjectFactory"/>
+  </definitionFactories>
+  <pageMap>
+    <page path="/WEB-INF/departmentDetailsTF.xml#departmentDetailsTF@findByDepartmentId"
+          usageId="adf_course_practice3_hrapplication_departmentdetails_view_departmentDetailsTF_departmentDetailsTF_ExecuteWithParamsPageDef"/>
+    <page path="/departmentDetails.jsff"
+          usageId="adf_course_practice3_hrapplication_departmentdetails_view_departmentDetailsPageDef"/>
+    <page path="/departmentDetailsTest.jspx"
+          usageId="adf_course_practice3_hrapplication_departmentdetails_view_departmentDetailsTestPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="adf_course_practice3_hrapplication_departmentdetails_view_departmentDetailsTF_departmentDetailsTF_ExecuteWithParamsPageDef"
+          path="adf.course.practice3.hrapplication.departmentdetails.view.pageDefs.departmentDetailsTF_departmentDetailsTF_ExecuteWithParamsPageDef"/>
+    <page id="adf_course_practice3_hrapplication_departmentdetails_view_departmentDetailsPageDef"
+          path="adf.course.practice3.hrapplication.departmentdetails.view.pageDefs.departmentDetailsPageDef"/>
+    <page id="adf_course_practice3_hrapplication_departmentdetails_view_departmentDetailsTestPageDef"
+          path="adf.course.practice3.hrapplication.departmentdetails.view.pageDefs.departmentDetailsTestPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="HRModuleDataControl"
+                     Package="adf.course.practice3.hrapplication.model.services"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl"
+                     SupportsTransactions="true" SupportsFindMode="true"
+                     SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="HRModuleLocal"
+                     syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>
