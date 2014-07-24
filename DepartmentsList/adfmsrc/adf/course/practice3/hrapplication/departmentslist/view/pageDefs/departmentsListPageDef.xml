@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel"
+                version="11.1.1.64.93" id="departmentsListPageDef"
+                Package="adf.course.practice3.hrapplication.departmentslist.view.pageDefs">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="AllDepartments" RangeSize="25"
+              DataControl="HRModuleDataControl" id="AllDepartmentsIterator"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="AllDepartmentsIterator" id="AllDepartments">
+      <nodeDefinition DefName="adf.course.practice3.hrapplication.model.queries.DepartmentsVO"
+                      Name="AllDepartments0">
+        <AttrNames>
+          <Item Value="DepartmentId"/>
+          <Item Value="DepartmentName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>
