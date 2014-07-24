@@ -22,7 +22,9 @@
                sortable="true"
                headerText="#{bindings.AllDepartments.hints.DepartmentName.label}"
                id="c1">
-      <af:outputText value="#{row.DepartmentName}" id="ot1"/>
+        <af:commandLink id="ot3" text="#{row.DepartmentName}" action="goDetails"> 
+            <af:setPropertyListener from="#{row.DepartmentId}" to="#{requestScope.deptId}" type="action"/> 
+        </af:commandLink>
     </af:column>
   </af:table>
 </jsp:root>
