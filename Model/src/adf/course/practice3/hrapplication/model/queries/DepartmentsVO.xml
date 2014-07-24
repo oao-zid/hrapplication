@@ -19,6 +19,10 @@
   <DesignTime>
     <Attr Name="_codeGenFlag2" Value="Access|VarAccess"/>
   </DesignTime>
+  <Variable
+    Name="varDepartmentId"
+    Kind="viewcriteria"
+    Type="java.lang.Long"/>
   <EntityUsage
     Name="DepartmentsEO"
     Entity="adf.course.practice3.hrapplication.model.entities.DepartmentsEO"/>
@@ -48,4 +52,42 @@
     EntityAttrName="LocationId"
     EntityUsage="DepartmentsEO"
     AliasName="LOCATION_ID"/>
+  <ViewCriteria
+    Name="FindByDepartmentId"
+    ViewObjectName="adf.course.practice3.hrapplication.model.queries.DepartmentsVO"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="vcrow0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="DepartmentsVOCriteria_vcrow0_DepartmentId"
+        ViewAttribute="DepartmentId"
+        Operator="="
+        Conjunction="AND"
+        Value=":varDepartmentId"
+        IsBindVarValue="true"
+        Required="Required"
+        GenerateIsNullClauseForBindVars="false"
+        ValidateBindVars="true"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
 </ViewObject>

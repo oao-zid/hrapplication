@@ -13,4 +13,17 @@
   <ViewUsage
     Name="AllDepartments"
     ViewObjectName="adf.course.practice3.hrapplication.model.queries.DepartmentsVO"/>
+  <ViewUsage
+    Name="DepartmentDetails"
+    ViewObjectName="adf.course.practice3.hrapplication.model.queries.DepartmentsVO"
+    MaxFetchSize="1">
+    <ViewCriteriaUsage
+      Name="FindByDepartmentId"
+      FullName="adf.course.practice3.hrapplication.model.queries.DepartmentsVO.FindByDepartmentId"/>
+    <ParameterMap>
+      <PIMap Variable="varDepartmentId">
+        <TransientExpression><![CDATA[40]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewUsage>
 </AppModule>
